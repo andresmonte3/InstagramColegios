@@ -1,0 +1,42 @@
+{% load static%}
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>InstagramColegios</title>
+  <link href="https://file.myfontastic.com/AcuvAY8t7m4EqBEdhZAfH5/icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/homestyle.css' %}">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <br>
+  <a href="{% url 'profile' %}" class="Profile">MI PERFIL</a>
+  </br>
+  <section class='photo_container'>
+	<section class='photo_header'>
+		<img src="https://yt3.ggpht.com/-5Of3QLRqTIk/AAAAAAAAAAI/AAAAAAAAAAA/Tmf4smULSck/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" class='photo_user'>
+		<h3 class='photo_username'>Slipknot</h3>
+	</section>
+	<section class='photo_image'>
+		<img src='https://i1.wp.com/www.metalinjection.net/wp-content/uploads/2016/11/slipknot-2016.jpg?fit=700%2C367'>
+	</section>
+	<section class='photo_icons'>
+		<i class="acm-heart-empty"></i>
+		<i class="acm-comment"></i>
+	</section>
+	<h5 class='photo_likes'><span>83,596</span> Me gusta</h5>
+	<section class='photo_comments'>
+		<section class='photo_comment'></section>
+		<section class='photo_comment'></section>
+		<section class='photo_comment'></section>
+		<section class='photo_comment'></section>
+	</section>
+	<section class='photo_add_comment'>
+		<input placeholder='Agrega un comentario...'>
+		<i class='acm-dots'></i>
+	</section>
+</section>
+<a href="{% url 'logout' %}" class="logout">Cerrar Sesión</a>
+</body>
+</html>

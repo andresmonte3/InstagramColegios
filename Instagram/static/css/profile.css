@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css?family=Kurale");
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  webkit-box-pack: center;
+  ms-flex-pack: center;
+  justify-content: center;
+  webkit-box-align: center;
+  ms-flex-align: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #FAFAFA;
+  font-family: 'Kurale', serif;
+}
+
+.insta {
+  width: 800px;
+  margin: 40px 10px;
+}
+.insta .insta-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 10px;
+}
+.insta .insta-header-data {
+  padding: 10px;
+}
+.insta .insta-follows p {
+  padding-right: 10px;
+}
+.insta .insta-indicator {
+  padding-right: 5px;
+  font-weight: bold;
+}
+.insta .insta-photo-profile {
+  width: 152px;
+  height: 152px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 2px dotted purple;
+}
+.insta .insta-info, .insta .insta-follows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.insta .insta-username {
+  font-weight: normal;
+  margin: 0;
+  margin-right: 10px;
+}
+.insta button {
+  background: #EEE;
+  border: 1px solid #CCC;
+  margin: 0 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.insta .insta-gallery {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+.insta .insta-picture-container {
+  position: relative;
+}
+.insta .insta-picture-container:hover .insta-picture-data {
+  opacity: 1;
+}
+.insta .insta-picture {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.insta .insta-picture-data {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+.insta .insta-picture-data span {
+  padding: 10px;
+}

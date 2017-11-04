@@ -1,0 +1,87 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.photo_container {
+  width: 400px;
+  background: white;
+  border: 1px solid #ccc;
+}
+
+.photo_container .photo_header {
+  display: flex;
+  align-items: center;
+}
+
+.photo_container .photo_user {
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.photo_container .photo_image img {
+  width: 100%;
+  display: block;
+}
+
+.photo_container .photo_icons {
+  font-size: 1.5rem;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.photo_container .photo_likes {
+  margin: 0;
+  padding: 0 10px 10px 10px;
+}
+
+.photo_container .photo_comments {
+  padding: 10px;
+  padding-top: 0;
+  font-size: 0.85rem;
+}
+
+.photo_container .photo_comment {
+  margin: 10px 0;
+}
+
+.photo_add_comment {
+  padding: 10px 0;
+  margin: 0 10px;
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.photo_add_comment input {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  border: 0;
+  outline: 0;
+  font-size: 0.8rem;
+}
+
+[class*='acm-'] {
+  padding: 5px;
+}
+
+.logout{
+  webkit-appearance: none;
+  border-radius: 3px;
+  border-style: solid;
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+  background-color: #4286f4;
+  line-height: 20px;
+  outline: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 15%;
+}
