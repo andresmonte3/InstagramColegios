@@ -1,0 +1,35 @@
+{% load static%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Subir Foto</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+  </head>
+
+
+  <body>
+    <nav class="navbar">
+    <section class="logo-section">
+      <img class="logo" src="https://seeklogo.com/images/I/instagram-new-2016-glyph-logo-84CB825424-seeklogo.com.png"/>
+      <div>
+      </div>
+      <img class="logoname" href="{% url 'home' %}" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2000px-Instagram_logo.svg.png"/>
+    </section>
+    <form class="search-section">
+      <input class="input-search" type="search" name="search" placeholder="Buscar"/>
+    </form>
+    <section class="icons-section"><a class="fa fa-upload" href=""></a><a class="fa fa-heart-o" href="{% url 'photos' %}"></a><a class="fa fa-user-o" href="{% url 'profile' %}"><a href="{% url 'logout' %}" class="fa fa-sign-out"></a></a></section>
+  </nav>
+
+
+    <form class="text" action="{ % url 'photos'% }" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+    <br>
+      <input type="file"  name="photo">
+      <input type="text" name="description" placeholder="Descripción...">
+      <input type="button" name="" value="">
+      </body>
+</html>

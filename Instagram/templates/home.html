@@ -7,12 +7,23 @@
   <link href="https://file.myfontastic.com/AcuvAY8t7m4EqBEdhZAfH5/icons.css" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/homestyle.css' %}">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
-  <br>
-  <a href="{% url 'profile' %}" class="Profile">MI PERFIL</a>
-  </br>
+  <nav class="navbar">
+  <section class="logo-section">
+    <img class="logo" src="https://seeklogo.com/images/I/instagram-new-2016-glyph-logo-84CB825424-seeklogo.com.png"/>
+    <div>
+    </div>
+    <a href="{% url 'home' %}" img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2000px-Instagram_logo.svg.png"/>
+  </section>
+  <form class="search-section">
+    <input class="input-search" type="search" name="search" placeholder="Buscar"/>
+  </form>
+  <section class="icons-section"><a class="fa fa-upload" href="{% url 'photos' %}"></a><a class="fa fa-heart-o" ></a><a class="fa fa-user-o" href="{% url 'profile' %}"><a href="{% url 'logout' %}" class="fa fa-sign-out"></a></a></section>
+</nav>
   <section class='photo_container'>
 	<section class='photo_header'>
 		<img src="https://yt3.ggpht.com/-5Of3QLRqTIk/AAAAAAAAAAI/AAAAAAAAAAA/Tmf4smULSck/s900-c-k-no-mo-rj-c0xffffff/photo.jpg" class='photo_user'>
@@ -37,6 +48,5 @@
 		<i class='acm-dots'></i>
 	</section>
 </section>
-<a href="{% url 'logout' %}" class="logout">Cerrar Sesión</a>
 </body>
 </html>

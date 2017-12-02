@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
     url(r'^home/$', views.home, name= 'home'),
     url(r'^profile/$', views.profile, name= 'profile'),
+    url(r'^photos/$', views.photos, name= 'photos'),
 ]

@@ -8,8 +8,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
   <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+  <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 </head>
 <body>
+  <nav class="navbar">
+  <section class="logo-section">
+    <img class="logo" src="https://seeklogo.com/images/I/instagram-new-2016-glyph-logo-84CB825424-seeklogo.com.png"/>
+    <div>
+    </div>
+    <a href="{% url 'home' %}" img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2000px-Instagram_logo.svg.png"/>
+  </section>
+  <form class="search-section">
+    <input class="input-search" type="search" name="search" placeholder="Buscar"/>
+  </form>
+  <section class="icons-section"><a class="fa fa-upload" href="{% url 'photos' %}"></a><a class="fa fa-heart-o" ></a><a class="fa fa-user-o" href="{% url 'profile' %}"><a href="{% url 'logout' %}" class="fa fa-sign-out"></a></a></section>
+</nav>
 <section class="insta">
   <section class="insta-header"><img class="insta-photo-profile" src="https://www.csgowallpapers.com/assets/images/original/mossawi_615036637056_20170314151408_445030607748.png"/>
     <section class="insta-header-data">
@@ -20,7 +33,7 @@
         <button class="insta-suggestion fa fa-caret-down"></button>
       </section>
       <section class="insta-follows">
-        <p><span class="insta-indicator">12</span> publicaciones</p>
+        <p><span class="insta-indicator">{{ post_user | length }}</span> publicaciones</p>
         <p><span class="insta-indicator">23 </span> seguidores</p>
         <p><span class="insta-indicator">30 </span> seguidos</p>
       </section>
@@ -28,33 +41,18 @@
     </section>
   </section>
   <section class="insta-gallery">
-    <section class="insta-picture-container"><img class="insta-picture" src="http://i0.kym-cdn.com/entries/icons/medium/000/005/180/YaoMingMeme.jpg"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>56m</span></span><span><i class="fa fa-comment"></i><span>76k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://i0.kym-cdn.com/entries/icons/medium/000/005/180/YaoMingMeme.jpg"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>56m</span></span><span><i class="fa fa-comment"></i><span>76k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://i0.kym-cdn.com/entries/icons/medium/000/005/180/YaoMingMeme.jpg"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>56m</span></span><span><i class="fa fa-comment"></i><span>76k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://i0.kym-cdn.com/entries/icons/medium/000/005/180/YaoMingMeme.jpg"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>56m</span></span><span><i class="fa fa-comment"></i><span>76k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://i0.kym-cdn.com/entries/icons/medium/000/005/180/YaoMingMeme.jpg"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>56m</span></span><span><i class="fa fa-comment"></i><span>76k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://i0.kym-cdn.com/entries/icons/medium/000/005/180/YaoMingMeme.jpg"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>56m</span></span><span><i class="fa fa-comment"></i><span>76k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://i0.kym-cdn.com/entries/icons/medium/000/005/180/YaoMingMeme.jpg"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>56m</span></span><span><i class="fa fa-comment"></i><span>76k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://i0.kym-cdn.com/entries/icons/medium/000/005/180/YaoMingMeme.jpg"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>56m</span></span><span><i class="fa fa-comment"></i><span>76k</span></span></section>
-    </section>
-    <section class="insta-picture-container"><img class="insta-picture" src="http://i0.kym-cdn.com/entries/icons/medium/000/005/180/YaoMingMeme.jpg"/>
-      <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>56m</span></span><span><i class="fa fa-comment"></i><span>76k</span></span></section>
-    </section>
+    {% if post_user %}
+      {% for curr_post in post_user %}
+      <section class="insta-picture-container"><img class="insta-picture" src=" {% static '' %}{{curr}}"/>
+        <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>56m</span></span><span><i class="fa fa-comment"></i><span>76k</span></span></section>
+      </section>
+      <section class="insta-picture-container"><img class="insta-picture" src="http://i0.kym-cdn.com/entries/icons/medium/000/005/180/YaoMingMeme.jpg"/>
+        <section class="insta-picture-data"><span><i class="fa fa-heart-o"></i><span>56m</span></span><span><i class="fa fa-comment"></i><span>76k</span></span></section>
+      </section>
+    {% endfor %}
+    {% else %}
+        No Tienes Publicaciones :'V
+    {% endif %}
   </section>
 </section>
 

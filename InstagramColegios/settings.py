@@ -124,3 +124,7 @@ STATIC_URL = '/static/'
 LOGIN_URL = 'index'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'index'
+
+#Path archivos multimedia
+MEDIA_ROOT = os.path.join(BASE_DIR, 'Instagram/static/media')
+MEDIA_URL = '/media/'
